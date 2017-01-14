@@ -7,6 +7,7 @@ import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.Period
 import java.time.temporal.ChronoUnit
+import kotlin.reflect.KClass
 
 /**
  * @author vsouhrada
@@ -39,6 +40,8 @@ fun main(args: Array<String>) {
   println("startTime: $startTime")
   println("endTime: $endTime")
 
+
+
 }
 
 infix fun LocalDate.months(endDate: LocalDate) = ChronoUnit.MONTHS.between(this, endDate)
@@ -49,3 +52,7 @@ infix fun LocalDateTime.at(lastSecond: lastSecond) = LocalDateTime.of(this.toLoc
 
 infix fun LocalDate.at(firstSecond: firstSecond) = LocalDateTime.of(this, LocalTime.MIN)
 infix fun LocalDate.at(lastSecond: lastSecond) = LocalDateTime.of(this, LocalTime.MIN)
+
+interface Join<E> {
+  infix fun join(type: KClass<Any>) = print("aa")
+}
