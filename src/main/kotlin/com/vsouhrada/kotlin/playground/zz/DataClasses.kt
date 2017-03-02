@@ -1,5 +1,7 @@
 package com.vsouhrada.kotlin.playground.zz
 
+import com.google.gson.Gson
+
 /**
  * @author vsouhrada
  */
@@ -18,12 +20,21 @@ fun main(args: Array<String>) {
   println(customer1.hashCode())         // hashCode()
   println(customer1.equals(customer2))  // equals()
   println(customer1.equals(customer3))
+
+  val customer = Customer(id = 2001, name = "Vaclav Souhrada", email = "vsouhrada@email.com")
+
+  val json = customer.toJSON()
+
+  val updatedCstSouhrada = customer.copy(email = "vaclav_souhrada@email.com")
 }
 
 
 data class Item(var name: String, var bsngp: BusinessUnitGroup)
 
-
+// ...
+fun Any.toJSON(): String {
+  return Gson().toJson(this)
+}
 
 
 data class BusinessUnitGroup(var name: String)

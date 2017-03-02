@@ -23,7 +23,8 @@ fun main(args: Array<String>) {
 
   println(testString)
 
-  "Vaclav".hello() // prints 'Hello, GK!'
+  "Vaclav".hello() // prints 'Hello, Vaclav!'
 
   println("vaclav souhrada".capitalize())
+  // prints VACLAV SOUHRADA
 }

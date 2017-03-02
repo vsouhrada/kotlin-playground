@@ -49,3 +49,11 @@ fun main(args: Array<String>) {
   // looking for trouble - uncomment
   //println(files!!.size)
 }
+
+class Owner {
+
+  var adress: String = ""
+  var telephone: String = ""
+  var email: String? = null;
+
+}

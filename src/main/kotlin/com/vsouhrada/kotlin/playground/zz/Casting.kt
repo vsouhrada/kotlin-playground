@@ -18,7 +18,7 @@ class Developer(val vacationDays: Int): Employee() {
   fun takeTimeOff() {
 
   }
-  
+
 }
 
 class CEO() : Employee() {
